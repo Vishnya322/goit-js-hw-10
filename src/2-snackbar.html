@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <section>
@@ -12,7 +13,33 @@
       <h1>Welcome to Snackbar</h1>
     </section>
 
+    <form class="form">
+    
+      <label class="time-ms"  >
+        Delay (ms)
+        <input class="delay-put" type="number" name="delay" required />
+      </label>
+    
+      <fieldset class="set-box">
+      
+        <legend>State</legend>
+        <div class="radio-box">
+        <label>
+          <input type="radio" name="state" value="fulfilled" required />
+          Fulfilled
+        </label>
+      
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Rejected
+        </label>
+      </div>
+      </fieldset>
+    
+      <button class="btn-form"  type="submit">Create notification</button>
+    
 
+    </form>
 
   <script type="module" src="./js/2-snackbar.js"></script>  
   </body>

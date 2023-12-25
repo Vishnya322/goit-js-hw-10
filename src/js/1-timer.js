@@ -7,6 +7,8 @@ import "izitoast/dist/css/iziToast.min.css";
 const input = document.querySelector("#datetime-picker");
 const button = document.querySelector("button");
 
+button.setAttribute("disabled", true);
+
 let userSelectedDate = "";
 const options = {
   enableTime: true,
