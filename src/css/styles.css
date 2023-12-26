@@ -76,6 +76,20 @@ border-color: #FFF;
  background: #6C8CFF; 
 }
 
+button:disabled {
+  color:  #989898;
+  background-color:  #CFCFCF;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color:  #CFCFCF; 
+  color: #989898; 
+}
+
+
+
+
 .timer {
 display: flex;
 align-items: flex-start;

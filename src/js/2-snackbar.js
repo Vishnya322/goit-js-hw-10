@@ -1,19 +1,17 @@
-
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const promiseDelay = document.querySelector(".form");
-const button = document.querySelector(".btn-form");
 
 promiseDelay.addEventListener('submit', e => {
   e.preventDefault();
+
   const delay = promiseDelay.elements.delay.value;
-  const state = promiseDelay.elements.state.value; // Отримання значення стану з радіокнопок
-  
+  const state = promiseDelay.elements.state.value; 
+
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      const fulfilled = state === 'fulfilled'; // Перевірка обраного стану
-  
+      const fulfilled = state === 'fulfilled'; 
       if (fulfilled) {
         resolve(`✅ Fulfilled promise in ${delay}ms`);
       } else {
@@ -35,4 +33,11 @@ promiseDelay.addEventListener('submit', e => {
         message: `❌ Rejected promise in ${delay}ms`,
       });
     });
+
+    promiseDelay.elements.delay.value = '';
+  
+  const radioButtons = document.querySelectorAll('input[type="radio"][name="state"]');
+  radioButtons.forEach(button => {
+    button.checked = false;
+  });
 });
